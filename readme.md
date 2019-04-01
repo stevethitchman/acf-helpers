@@ -16,3 +16,18 @@ wp_the_field('field_name', true, 20);
 // Load an image (must be returning image id)
 wp_get_image('field_name', 20);
 ```
+
+### Examples
+```php
+// Heading
+<h2><?php wp_the_field('heading'); ?></h2>
+
+
+// WYSIWYG
+<div><?php echo apply_filters('the_content', wp_get_field('wysiwyg')); ?></div>
+
+// Image
+<?php $image = wp_get_image('image_field'); ?>
+<img src="<?php echo $image->url; ?>" alt="<?php echo $image->alt; ?>">
+```
+
